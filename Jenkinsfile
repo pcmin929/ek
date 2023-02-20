@@ -9,7 +9,7 @@ pipeline {
   // 레포지토리가 없으면 생성됨
   // Credential들에는 젠킨스 크레덴셜에서 설정한 ID를 사용
   environment {
-    dockerHubRegistry = 'oolralra/base-sb' 
+    dockerHubRegistry = 'oolralra/sbimage' 
     dockerHubRegistryCredential = 'docker_cre' 
     githubCredential = 'git_cre'
     gitEmail = 'pcmin929@gmail.com'
