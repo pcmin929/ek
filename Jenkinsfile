@@ -15,7 +15,7 @@ pipeline {
     gitEmail = 'pcmin929@gmail.com'
     gitName = 'pcmin929'
     githttps = 'https://github.com/pcmin929/ek.git'
-    gitssh = 'git@github.com:pcmin929/deployment.git'
+    gitssh = 'git@github.com:pcmin929/ek.git'
     
   }
 
@@ -111,11 +111,11 @@ pipeline {
         sh "git config --global user.email ${gitEmail}"
         sh "git config --global user.name ${gitName}"
         sh "sed -i 's/tomcat:.*/tomcat:${currentBuild.number}/g' deploy/deployment.yml"
-        sh "git add -A"
+        sh "git add ."
         sh "git commit -m 'fix:${dockerHubRegistry} ${currentBuild.number} image versioning'"
         sh "git branch -M main"
         sh "git remote remove origin"
-        sh "git remote add origin git@github.com:pcmin929/deployment.git"
+        sh "git remote add origin ${gitssh}"
         sh "git push -u origin main"
         
           
