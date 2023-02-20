@@ -111,7 +111,7 @@ pipeline {
         sh "git config --global user.email ${gitEmail}"
         sh "git config --global user.name ${gitName}"
         sh "sed -i 's/tomcat:.*/tomcat:${currentBuild.number}/g' deploy/deployment.yml"
-        sh "git add ."
+        sh "git add -A"
         sh "git commit -m 'fix:${dockerHubRegistry} ${currentBuild.number} image versioning'"
         sh "git branch -M main"
         sh "git remote remove origin"
