@@ -15,7 +15,7 @@ pipeline {
     gitEmail = 'pcmin929@gmail.com'
     gitName = 'pcmin929'
     githttps = 'https://github.com/pcmin929/ek.git'
-    gitssh = 'git@github.com:pcmin929/ek.git'
+    gitssh = 'git@github.com:pcmin929/deployment.git'
     
   }
 
